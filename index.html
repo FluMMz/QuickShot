@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickShot - Screenshot & Upload Tool für Chrome</title>
-    <meta name="description" content="Das professionelle Screenshot-Tool für Chrome. Drag & Drop Auswahl, Annotation-Tools und automatischer Upload. Macht Screenshots in Sekunden.">
+    <title>QuickShot - Professional Screenshot & Annotation Tool for Chrome</title>
+    <meta name="description" content="Professional screenshot tool for Chrome. Drag & drop selection, annotation tools, and automatic upload. Create screenshots in seconds.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -116,6 +116,9 @@
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .cta-btn:hover {
@@ -317,10 +320,12 @@
         .demo-highlight {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            display: inline-block;
-            margin: 10px 0;
+            padding: 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0;
             font-weight: 600;
         }
 
@@ -360,11 +365,6 @@
         @keyframes pulse {
             0%, 100% { box-shadow: 0 25px 60px var(--shadow-lg); }
             50% { box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4); }
-        }
-
-        .screenshot-demo img {
-            width: 100%;
-            border-radius: 16px;
         }
 
         /* Features Section */
@@ -444,57 +444,6 @@
             width: 32px;
             height: 32px;
             fill: white;
-        }
-
-        .feature-icon::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            right: -5px;
-            width: 24px;
-            height: 24px;
-            background: var(--success);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-        }
-
-        .feature-icon.drag::after { 
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M13 20h-2v-7H4v-2h7V4h2v7h7v2h-7v7z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .feature-icon.edit::after { 
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .feature-icon.upload::after { 
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .feature-icon.hotkey::after { 
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .feature-icon.history::after { 
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3M12,8V13L16.28,15.54L17.5,13.33L14.5,11.5V8H12Z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .feature-icon.privacy::after { 
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
         }
 
         .feature-card h3 {
@@ -649,6 +598,8 @@
             font-weight: 700;
             margin-bottom: 1rem;
             color: white;
+            display: flex;
+            align-items: center;
         }
 
         .footer-section p,
@@ -756,16 +707,16 @@
             </div>
             <ul class="nav-links">
                 <li><a onclick="scrollToSection('features')">Features</a></li>
-                <li><a onclick="scrollToSection('how-it-works')">So funktioniert's</a></li>
+                <li><a onclick="scrollToSection('how-it-works')">How it Works</a></li>
                 <li><a onclick="scrollToSection('showcase')">Showcase</a></li>
                 <li><a href="#" onclick="downloadExtension()">Download</a></li>
             </ul>
             <a href="#" class="cta-btn" onclick="downloadExtension()">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                     <circle cx="12" cy="12" r="3"/>
                 </svg>
-                Jetzt installieren
+                Install Now
             </a>
         </nav>
     </header>
@@ -775,19 +726,19 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <h1>Screenshots wie ein Profi</h1>
-                    <p>QuickShot revolutioniert deine Screenshot-Workflows. Drag & Drop Auswahl, professionelle Annotation-Tools und automatischer Upload - alles in einer Chrome Extension.</p>
+                    <h1>Screenshots Like a Pro</h1>
+                    <p>QuickShot revolutionizes your screenshot workflow. Drag & drop selection, professional annotation tools, and automatic upload - all in one Chrome extension.</p>
                     <div class="hero-buttons">
                         <a href="#" class="btn-primary" onclick="downloadExtension()">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                                 <circle cx="12" cy="12" r="3"/>
                             </svg>
-                            Kostenlos installieren
+                            Install for Free
                         </a>
                         <a href="#" class="btn-secondary" onclick="scrollToSection('how-it-works')">
                             <i class="fas fa-play"></i>
-                            Demo ansehen
+                            Watch Demo
                         </a>
                     </div>
                 </div>
@@ -817,8 +768,8 @@
                                         <div style="height: 8px; background: #e2e8f0; border-radius: 4px; width: 70%; margin-bottom: 12px;"></div>
                                     </div>
                                     
-                                    <div class="demo-highlight" style="margin: 16px 0; padding: 16px; text-align: center; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 8px;">
-                                        <div style="width: 100px; height: 12px; background: rgba(255,255,255,0.8); border-radius: 6px; margin: 0 auto;"></div>
+                                    <div class="demo-highlight">
+                                        <div style="width: 100px; height: 12px; background: rgba(255,255,255,0.8); border-radius: 6px;"></div>
                                     </div>
                                     
                                     <div style="display: flex; gap: 8px; margin-top: 16px;">
@@ -828,12 +779,12 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Animierte Drag & Drop Auswahl -->
+                                <!-- Animated Drag & Drop Selection -->
                                 <div class="drag-selection"></div>
                                 
-                                <!-- Animiertes Control Panel -->
+                                <!-- Animated Control Panel -->
                                 <div class="control-panel-demo">
-                                    <span style="font-size: 11px;">📸 Bereich auswählen</span>
+                                    <span style="font-size: 11px;">Select area</span>
                                     <button class="demo-btn btn-edit">Edit</button>
                                     <button class="demo-btn btn-upload">Upload</button>
                                 </div>
@@ -852,69 +803,69 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Warum QuickShot?</h2>
-                <p>Entwickelt für Power-User, die mehr als nur einfache Screenshots brauchen</p>
+                <h2>Why QuickShot?</h2>
+                <p>Built for power users who need more than just basic screenshots</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
-                    <div class="feature-icon drag">
+                    <div class="feature-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
                             <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
                     </div>
-                    <h3>Präzise Drag & Drop Auswahl</h3>
-                    <p>Wähle exakt den Bereich aus, den du brauchst. Kein mühsames Zuschneiden mehr - QuickShot erfasst pixel-genau was du markierst.</p>
+                    <h3>Precise Drag & Drop Selection</h3>
+                    <p>Select exactly the area you need. No more tedious cropping - QuickShot captures pixel-perfect what you mark.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon edit">
+                    <div class="feature-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
                             <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
                     </div>
-                    <h3>Professionelle Annotation-Tools</h3>
-                    <p>Pfeile, Textboxen, Markierungen - annotiere deine Screenshots direkt im Browser. Perfekt für Bug-Reports und Dokumentation.</p>
+                    <h3>Professional Annotation Tools</h3>
+                    <p>Arrows, text boxes, highlights - annotate your screenshots directly in the browser. Perfect for bug reports and documentation.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon upload">
+                    <div class="feature-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
                             <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
                     </div>
-                    <h3>Automatischer Upload</h3>
-                    <p>Screenshots werden automatisch hochgeladen und der Link in die Zwischenablage kopiert. Ein Klick auf die Notification öffnet das Bild.</p>
+                    <h3>Automatic Upload</h3>
+                    <p>Screenshots are automatically uploaded and the link copied to clipboard. Click the notification to open the image.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon hotkey">
+                    <div class="feature-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
                             <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
                     </div>
-                    <h3>Blitzschnelle Hotkeys</h3>
-                    <p>Ctrl+Shift+Q startet sofort einen Screenshot. Kein Umweg über Menüs oder Icons - maximale Effizienz für deinen Workflow.</p>
+                    <h3>Lightning-Fast Hotkeys</h3>
+                    <p>Ctrl+Shift+Q instantly starts a screenshot. No detours through menus or icons - maximum efficiency for your workflow.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon history">
+                    <div class="feature-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
                             <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
                     </div>
-                    <h3>Screenshot-Verlauf</h3>
-                    <p>Alle deine Screenshots werden automatisch gespeichert. Schneller Zugriff auf die letzten Uploads direkt aus dem Extension-Popup.</p>
+                    <h3>Screenshot History</h3>
+                    <p>All your screenshots are automatically saved. Quick access to recent uploads directly from the extension popup.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-icon privacy">
+                    <div class="feature-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
                             <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
                     </div>
-                    <h3>Datenschutz-freundlich</h3>
-                    <p>Keine Anmeldung erforderlich. Screenshots werden nur bei Bedarf verarbeitet. Deine Privatsphäre steht an erster Stelle.</p>
+                    <h3>Privacy-Friendly</h3>
+                    <p>No registration required. Screenshots are only processed when needed. Your privacy comes first.</p>
                 </div>
             </div>
         </div>
@@ -924,29 +875,29 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>So einfach geht's</h2>
-                <p>Von der Installation bis zum fertigen Screenshot in unter 30 Sekunden</p>
+                <h2>How It Works</h2>
+                <p>From installation to finished screenshot in under 30 seconds</p>
             </div>
             <div class="steps">
                 <div class="step fade-in">
                     <div class="step-number">1</div>
-                    <h3>Extension installieren</h3>
-                    <p>Einmalige Installation aus dem Chrome Web Store. Keine Konfiguration nötig - QuickShot funktioniert sofort.</p>
+                    <h3>Install Extension</h3>
+                    <p>One-time installation from Chrome Web Store. No configuration needed - QuickShot works immediately.</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">2</div>
-                    <h3>Hotkey drücken</h3>
-                    <p>Ctrl+Shift+Q startet den Screenshot-Modus. Alternativ über das Extension-Icon im Browser.</p>
+                    <h3>Press Hotkey</h3>
+                    <p>Ctrl+Shift+Q starts screenshot mode. Alternatively use the extension icon in your browser.</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">3</div>
-                    <h3>Bereich auswählen</h3>
-                    <p>Ziehe mit der Maus über den gewünschten Bereich. Live-Preview zeigt dir genau was erfasst wird.</p>
+                    <h3>Select Area</h3>
+                    <p>Drag your mouse over the desired area. Live preview shows you exactly what will be captured.</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">4</div>
-                    <h3>Optional: Annotieren</h3>
-                    <p>Klicke "Edit" für Annotation-Tools oder "Upload" für direkten Upload. Pfeile, Text und Markierungen in Sekunden.</p>
+                    <h3>Optional: Annotate</h3>
+                    <p>Click "Edit" for annotation tools or "Upload" for direct upload. Arrows, text and highlights in seconds.</p>
                 </div>
             </div>
         </div>
@@ -956,29 +907,29 @@
     <section id="showcase" class="showcase">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Perfekt für jeden Use Case</h2>
-                <p>Egal ob Bug-Reports, Tutorials oder Design-Feedback - QuickShot passt sich an</p>
+                <h2>Perfect for Every Use Case</h2>
+                <p>Whether bug reports, tutorials, or design feedback - QuickShot adapts</p>
             </div>
             <div class="showcase-grid">
                 <div class="showcase-item fade-in">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23fee2e2'/%3E%3Cpath d='M50 50 L250 50 L250 150 L50 150 Z' fill='white' stroke='%23ef4444' stroke-width='2'/%3E%3Ctext x='150' y='100' text-anchor='middle' font-family='system-ui' font-size='14' fill='%23dc2626'%3EBug gefunden!%3C/text%3E%3Cpath d='M200 80 L230 100 L200 120 M200 100 L180 100' stroke='%23ef4444' stroke-width='3' fill='none'/%3E%3C/svg%3E" alt="Bug Reports">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23fee2e2'/%3E%3Cpath d='M50 50 L250 50 L250 150 L50 150 Z' fill='white' stroke='%23ef4444' stroke-width='2'/%3E%3Ctext x='150' y='100' text-anchor='middle' font-family='system-ui' font-size='14' fill='%23dc2626'%3EBug found!%3C/text%3E%3Cpath d='M200 80 L230 100 L200 120 M200 100 L180 100' stroke='%23ef4444' stroke-width='3' fill='none'/%3E%3C/svg%3E" alt="Bug Reports">
                     <div class="showcase-content">
                         <h4>Bug Reports</h4>
-                        <p>Annotiere Probleme direkt im Screenshot und teile sie mit deinem Team.</p>
+                        <p>Annotate problems directly in screenshots and share them with your team.</p>
                     </div>
                 </div>
                 <div class="showcase-item fade-in">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23dbeafe'/%3E%3Crect x='50' y='60' width='200' height='80' fill='white' stroke='%233b82f6' stroke-width='2'/%3E%3Ctext x='150' y='90' text-anchor='middle' font-family='system-ui' font-size='12' fill='%231d4ed8'%3ESchritt 1: Hier klicken%3C/text%3E%3Ccircle cx='250' cy='100' r='15' fill='%2310b981' opacity='0.8'/%3E%3Ctext x='250' y='105' text-anchor='middle' font-family='system-ui' font-size='10' fill='white'%3E1%3C/text%3E%3C/svg%3E" alt="Tutorials">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23dbeafe'/%3E%3Crect x='50' y='60' width='200' height='80' fill='white' stroke='%233b82f6' stroke-width='2'/%3E%3Ctext x='150' y='90' text-anchor='middle' font-family='system-ui' font-size='12' fill='%231d4ed8'%3EStep 1: Click here%3C/text%3E%3Ccircle cx='250' cy='100' r='15' fill='%2310b981' opacity='0.8'/%3E%3Ctext x='250' y='105' text-anchor='middle' font-family='system-ui' font-size='10' fill='white'%3E1%3C/text%3E%3C/svg%3E" alt="Tutorials">
                     <div class="showcase-content">
-                        <h4>Tutorials & Anleitungen</h4>
-                        <p>Erstelle verständliche Schritt-für-Schritt Anleitungen mit nummerierten Markierungen.</p>
+                        <h4>Tutorials & Guides</h4>
+                        <p>Create clear step-by-step instructions with numbered annotations.</p>
                     </div>
                 </div>
                 <div class="showcase-item fade-in">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f3e8ff'/%3E%3Crect x='40' y='40' width='100' height='60' fill='white' stroke='%238b5cf6' stroke-width='2'/%3E%3Crect x='160' y='40' width='100' height='60' fill='white' stroke='%238b5cf6' stroke-width='2'/%3E%3Ctext x='90' y='75' text-anchor='middle' font-family='system-ui' font-size='10' fill='%237c3aed'%3EVorher%3C/text%3E%3Ctext x='210' y='75' text-anchor='middle' font-family='system-ui' font-size='10' fill='%237c3aed'%3ENachher%3C/text%3E%3Cpath d='M140 70 L160 70 M150 65 L160 70 L150 75' stroke='%238b5cf6' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="Design Reviews">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23f3e8ff'/%3E%3Crect x='40' y='40' width='100' height='60' fill='white' stroke='%238b5cf6' stroke-width='2'/%3E%3Crect x='160' y='40' width='100' height='60' fill='white' stroke='%238b5cf6' stroke-width='2'/%3E%3Ctext x='90' y='75' text-anchor='middle' font-family='system-ui' font-size='10' fill='%237c3aed'%3EBefore%3C/text%3E%3Ctext x='210' y='75' text-anchor='middle' font-family='system-ui' font-size='10' fill='%237c3aed'%3EAfter%3C/text%3E%3Cpath d='M140 70 L160 70 M150 65 L160 70 L150 75' stroke='%238b5cf6' stroke-width='2' fill='none'/%3E%3C/svg%3E" alt="Design Reviews">
                     <div class="showcase-content">
                         <h4>Design Reviews</h4>
-                        <p>Sammle Feedback zu UI/UX Designs mit präzisen Markierungen und Kommentaren.</p>
+                        <p>Collect feedback on UI/UX designs with precise annotations and comments.</p>
                     </div>
                 </div>
             </div>
@@ -991,19 +942,19 @@
             <div class="stats-grid">
                 <div class="fade-in">
                     <div class="stat-number" data-target="10000">0+</div>
-                    <div class="stat-label">Aktive Nutzer</div>
+                    <div class="stat-label">Active Users</div>
                 </div>
                 <div class="fade-in">
                     <div class="stat-number" data-target="250000">0+</div>
-                    <div class="stat-label">Screenshots erstellt</div>
+                    <div class="stat-label">Screenshots Created</div>
                 </div>
                 <div class="fade-in">
                     <div class="stat-number" data-target="99">0%</div>
-                    <div class="stat-label">Zufriedenheitsrate</div>
+                    <div class="stat-label">Satisfaction Rate</div>
                 </div>
                 <div class="fade-in">
                     <div class="stat-number" data-target="5">0s</div>
-                    <div class="stat-label">Durchschnittliche Upload-Zeit</div>
+                    <div class="stat-label">Average Upload Time</div>
                 </div>
             </div>
         </div>
@@ -1021,28 +972,28 @@
                         </svg>
                         QuickShot
                     </h4>
-                    <p>Das professionelle Screenshot-Tool für Chrome. Entwickelt für Power-User, die mehr als nur einfache Screenshots brauchen.</p>
+                    <p>The professional screenshot tool for Chrome. Built for power users who need more than just basic screenshots.</p>
                     <div style="margin-top: 1rem;">
                         <a href="#" onclick="downloadExtension()" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none;">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M3 3v4a1 1 0 0 1-2 0V3a2 2 0 0 1 2-2h4a1 1 0 0 1 0 2H3zM21 3h-4a1 1 0 0 1 0-2h4a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V3zM23 17a1 1 0 0 1 2 0v4a2 2 0 0 1-2 2h-4a1 1 0 0 1 0-2h4v-4zM7 23H3a2 2 0 0 1-2-2v-4a1 1 0 0 1 2 0v4h4a1 1 0 0 1 0 2z"/>
                                 <circle cx="12" cy="12" r="3"/>
                             </svg>
-                            Jetzt installieren
+                            Install Now
                         </a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Features</h4>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="scrollToSection('features')">Drag & Drop Auswahl</a></li>
-                        <li><a href="#" onclick="scrollToSection('features')">Annotation-Tools</a></li>
-                        <li><a href="#" onclick="scrollToSection('features')">Automatischer Upload</a></li>
-                        <li><a href="#" onclick="scrollToSection('features')">Screenshot-Verlauf</a></li>
+                        <li><a href="#" onclick="scrollToSection('features')">Drag & Drop Selection</a></li>
+                        <li><a href="#" onclick="scrollToSection('features')">Annotation Tools</a></li>
+                        <li><a href="#" onclick="scrollToSection('features')">Automatic Upload</a></li>
+                        <li><a href="#" onclick="scrollToSection('features')">Screenshot History</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Verwendung</h4>
+                    <h4>Use Cases</h4>
                     <ul class="footer-links">
                         <li><a href="#" onclick="scrollToSection('showcase')">Bug Reports</a></li>
                         <li><a href="#" onclick="scrollToSection('showcase')">Tutorials</a></li>
@@ -1054,14 +1005,14 @@
                     <h4>Support</h4>
                     <ul class="footer-links">
                         <li><a href="mailto:support@quickshot.app">Email Support</a></li>
-                        <li><a href="#" onclick="openPrivacyPolicy()">Datenschutz</a></li>
-                        <li><a href="#" onclick="openTerms()">Nutzungsbedingungen</a></li>
+                        <li><a href="#" onclick="openPrivacyPolicy()">Privacy Policy</a></li>
+                        <li><a href="#" onclick="openTerms()">Terms of Service</a></li>
                         <li><a href="#" onclick="openFAQ()">FAQ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 QuickShot. Alle Rechte vorbehalten. | Entwickelt mit ❤️ für Screenshot-Profis</p>
+                <p>&copy; 2024 QuickShot. All rights reserved. | Built with ❤️ for screenshot professionals</p>
             </div>
         </div>
     </footer>
@@ -1076,21 +1027,21 @@
 
         // Download Extension
         function downloadExtension() {
-            alert('Weiterleitung zum Chrome Web Store...\n\nHinweis: Diese Demo-Website zeigt noch keine echte Extension. In der finalen Version würde hier der Link zum Chrome Web Store stehen.');
+            alert('Redirecting to Chrome Web Store...\n\nNote: This demo website does not yet show a real extension. In the final version, this would link to the Chrome Web Store.');
             // window.open('https://chrome.google.com/webstore/detail/quickshot/...', '_blank');
         }
 
         // Support functions
         function openPrivacyPolicy() {
-            alert('Datenschutzerklärung würde hier geöffnet werden.');
+            alert('Privacy Policy would open here.');
         }
 
         function openTerms() {
-            alert('Nutzungsbedingungen würden hier geöffnet werden.');
+            alert('Terms of Service would open here.');
         }
 
         function openFAQ() {
-            alert('FAQ-Seite würde hier geöffnet werden.');
+            alert('FAQ page would open here.');
         }
 
         // Intersection Observer for fade-in animations
@@ -1169,12 +1120,6 @@
             }
         });
 
-        // Mobile menu toggle (if needed)
-        function toggleMobileMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
         // Add some interactive hover effects
         document.addEventListener('DOMContentLoaded', () => {
             // Feature cards tilt effect
@@ -1204,21 +1149,6 @@
                 e.target.click();
             }
         });
-
-        // Performance: Lazy load images when they become visible
-        const lazyImages = document.querySelectorAll('img[data-src]');
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-
-        lazyImages.forEach(img => imageObserver.observe(img));
     </script>
 </body>
 </html>
